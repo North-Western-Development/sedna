@@ -23,8 +23,8 @@ repositories {
     maven {
         url = uri("https://maven.pkg.github.com/fnuecke/ceres")
         credentials {
-            username = project.findProperty("gpr.user") as String? ?: System.getenv("GPR_USER")
-            password = project.findProperty("gpr.key") as String? ?: System.getenv("GPR_KEY")
+            username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_ACTOR")
+            password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
         }
         content { includeGroup("li.cil.ceres") }
     }
