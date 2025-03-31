@@ -61,7 +61,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri(System.getenv("GITHUB_MAVEN_URL") ?: "")
+            url = "https://maven.pkg.github.com/North-Western-Development/sedna"
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_TOKEN")
